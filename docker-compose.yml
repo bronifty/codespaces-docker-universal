@@ -1,0 +1,23 @@
+version: '3'
+services:
+  astro:
+    build: astro
+    # command: astro dev init
+    # command: astro dev start
+    volumes:
+      # Mount the root folder that contains .git
+      - ./astro:/workspace
+      # - .:/workspace:cached
+    # command: /bin/sh -c "while sleep 1000; do :; done"
+  #   links:
+  #     - container-2
+  #   # ...
+
+  # container-2:
+  #   image: ubuntu:bionic
+  #   volumes:
+  #     # Mount the root folder that contains .git
+  #     - .:/workspace:cached
+  #   command: /bin/sh -c "while sleep 1000; do :; done"
+  #   # ...
+# docker run -it --init --privileged --rm mcr.microsoft.com/vscode/devcontainers/universal:1-linux
