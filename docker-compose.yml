@@ -3,24 +3,10 @@ services:
   astro:
     build: astro
     privileged: true
-    # command: astro dev init
     # command: astro dev start
-    # command: /bin/sh -c "while sleep 1000; do :; done"
     # ports:
     #   - 8080:8080
     volumes:
-      # Mount the root folder that contains .git
       - ./astro:/workspace
-      # - .:/workspace:cached
-  #   links:
-  #     - container-2
-  #   # ...
-
-  # container-2:
-  #   image: ubuntu:bionic
-  #   volumes:
-  #     # Mount the root folder that contains .git
-  #     - .:/workspace:cached
-  #   command: /bin/sh -c "while sleep 1000; do :; done"
-  #   # ...
-# docker run -it --init --privileged --rm mcr.microsoft.com/vscode/devcontainers/universal:1-linux
+  
+# docker run -it --init --rm --privileged mcr.microsoft.com/vscode/devcontainers/universal:1-linux
