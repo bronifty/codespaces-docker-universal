@@ -2,13 +2,16 @@ version: '3'
 services:
   astro:
     build: astro
+    privileged: true
     # command: astro dev init
     # command: astro dev start
+    # command: /bin/sh -c "while sleep 1000; do :; done"
+    # ports:
+    #   - 8080:8080
     volumes:
       # Mount the root folder that contains .git
       - ./astro:/workspace
       # - .:/workspace:cached
-    # command: /bin/sh -c "while sleep 1000; do :; done"
   #   links:
   #     - container-2
   #   # ...
