@@ -8,5 +8,5 @@ services:
     #   - 8080:8080
     volumes:
       - ./astro:/workspace
-  
+      # - /var/run/docker.sock:/var/run/docker.sock
 # docker run -it --init --rm --privileged mcr.microsoft.com/vscode/devcontainers/universal:1-linux
